@@ -15,3 +15,8 @@ npm update
 ng serve
 ```
 
+Production Build:
+
+```
+ng build --prod --output-path /var/www/html/mmo-angular-webinterface --base-href /mmo-angular-webinterface/
+```
