@@ -5,6 +5,101 @@
               <div class="card card-stats">
                   <div class="card-header card-header-warning card-header-icon">
                       <div class="card-icon">
+                          <i class="material-icons">warning</i>
+                      </div>
+                      <p class="card-category">Max. Temperatur der Server</p>
+                      <h3 class="card-title">40
+                          <small>&deg;C</small>
+                          <google-chart #googlechart
+                                        [title]="chart.title"
+                                        [type]="chart.type"
+                                        [data]="chart.data"
+                                        [options]="chart.options">
+                          </google-chart>
+                      </h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons text-danger">warning</i>
+                          <a href="javascript:void(0)">Server Monitoring</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-success card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">verified_user</i>
+                      </div>
+                      <p class="card-category">Verifizierte User</p>
+                      <h3 class="card-title">1</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">date_range</i> Last 24 Hours
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-danger card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">info_outline</i>
+                      </div>
+                      <p class="card-category">Maps</p>
+                      <h3 class="card-title">Zones: 2<br />
+                      Regions: 2<br />
+                      Maps: 2</h3>
+                  </div>
+                  <!-- <div class="card-body">
+                      <mwl-gauge
+                              [max]="100"
+                              [dialStartAngle]="-90"
+                              [dialEndAngle]="-90.001"
+                              [value]="50"
+                              [animated]="true"
+                              [animationDuration]="1">
+                      </mwl-gauge>
+                      <google-chart #googlechart
+                                    [title]="chart.title"
+                                    [type]="chart.type"
+                                    [data]="chart.data"
+                                    [options]="chart.options">
+                      </google-chart>
+                  </div> -->
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">local_offer</i> Tracked from Github
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-info card-header-icon">
+                      <div class="card-icon">
+                          <i class="material-icons">supervised_user_circle</i>
+                          <!-- <i class="fa fa-twitter"></i> -->
+                      </div>
+                      <p class="card-category">Active users</p>
+                      <h3 class="card-title">1</h3>
+                  </div>
+                  <div class="card-footer">
+                      <div class="stats">
+                          <i class="material-icons">update</i> Just Updated
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                  <div class="card-header card-header-warning card-header-icon">
+                      <div class="card-icon">
                           <i class="material-icons">content_copy</i>
                       </div>
                       <p class="card-category">Used Space</p>
@@ -410,6 +505,6 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
   </div>
 </div>

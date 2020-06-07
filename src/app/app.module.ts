@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { GaugeModule } from 'angular-gauge';
 
 
 import { AppRoutingModule } from './app.routing';
@@ -22,6 +23,7 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import {GoogleChartsModule} from "angular-google-charts";
 
 @NgModule({
   imports: [
@@ -34,7 +36,9 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+    }),
+    GaugeModule.forRoot(),
+    GoogleChartsModule.forRoot(),
   ],
   declarations: [
     AppComponent,

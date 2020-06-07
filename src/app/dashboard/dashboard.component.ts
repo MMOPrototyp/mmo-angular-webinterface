@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import * as Chartist from 'chartist';
+import {GoogleChartComponent} from "angular-google-charts";
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +10,30 @@ import * as Chartist from 'chartist';
 export class DashboardComponent implements OnInit {
 
   constructor() { }
+
+    @ViewChild('googlechart')
+    googlechart: GoogleChartComponent;
+    chart = {
+        type: 'Gauge',
+        data: [
+            ['CPU', 50],
+            ['Memory', 99],
+            ['HDD', 99]
+        ],
+        options: {
+            width: 400,
+            height: 120,
+            greenFrom: 0,
+            greenTo: 75,
+            redFrom: 90,
+            redTo: 100,
+            yellowFrom: 75,
+            yellowTo: 90,
+            minorTicks: 5
+        },
+        title: "Server Monitoring"
+    };
+
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
